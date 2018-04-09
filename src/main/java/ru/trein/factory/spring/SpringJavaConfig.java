@@ -4,12 +4,19 @@ import javafx.fxml.FXMLLoader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ru.trein.factory.ui.ViewHolder;
+import ru.trein.factory.ui.connect.ModbusConnect;
 import ru.trein.factory.ui.controllers.RootLayoutController;
 
 import java.io.IOException;
 
 @Configuration
 public class SpringJavaConfig {
+
+
+    @Bean
+    public ModbusConnect modbusConnect() {
+        return new ModbusConnect();
+    }
 
     @Bean
     public ViewHolder rootLayout() throws IOException {

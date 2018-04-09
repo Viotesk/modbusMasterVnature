@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="ru.trein.factory.ui.controllers.RootLayoutController">
+<GridPane maxHeight="250.0" maxWidth="600.0" minHeight="250.0" minWidth="600.0" prefHeight="250.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.trein.factory.ui.controllers.RootLayoutController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -21,7 +21,7 @@
     <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
     <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
       <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="NEVER" />
   </rowConstraints>
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
@@ -41,7 +41,9 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Label>
-            <ComboBox fx:id="registerType" prefWidth="150.0" />
+            <ComboBox fx:id="registerType" prefWidth="100.0" />
+            <Label text="ValueTOWrite: " />
+            <TextField fx:id="valueTF" prefWidth="150.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
@@ -50,9 +52,10 @@
             <Spinner fx:id="startAddressSpinner" prefWidth="100.0" />
             <Label text="Number of Coils" />
             <Spinner fx:id="countSpinner" prefWidth="100.0" />
+            <Button fx:id="startBtn" mnemonicParsing="false" text="GO!" />
          </children>
       </HBox>
-      <TableView fx:id="outputTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+      <TableView fx:id="tableOut" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
